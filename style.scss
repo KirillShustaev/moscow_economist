@@ -1,0 +1,18 @@
+@import "normalize";
+
+@import "settings";
+
+@import "mixin";
+
+.container {
+    padding-inline: min(6.25vw, 120px);
+}
+
+.hero {
+    &__container {
+        @include back_img;
+        background-image: url(../img/hero_line.png);
+        position: relative;
+        min-height: min(37.76vw, 725px);
+    }
+}
