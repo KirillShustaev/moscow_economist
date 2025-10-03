@@ -592,6 +592,53 @@
   }
 }
 
+//
+ .example-desc {
+        margin:3px 0;
+        padding:5px;
+      }
+
+      #carousel {
+        display: flex;
+        justify-content: center;
+        width:100%;
+        text-align: center;
+        margin: 0 auto;
+        border:1px solid #222;
+        height:600px;
+        position:relative;
+        clear:both;
+        overflow:hidden;
+        background:#FFF;
+      }
+      #carousel img {
+        visibility:hidden; /* hide images until carousel can handle them */
+        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .split-left {
+        width:450px;
+        float:left;
+      }
+      .split-right {
+        width:400px;
+        float:left;
+        margin-left:10px;
+      }
+      #callback-output {
+        height:250px;
+        overflow:scroll;
+      }
+      textarea#newoptions {
+        width:430px;
+      }
+      .nav {
+        width: 80px; margin: 20px auto
+      }
+
 // hover
 .nomin__button:hover {
   color: #ffffff;
