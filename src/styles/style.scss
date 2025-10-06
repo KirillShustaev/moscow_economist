@@ -213,7 +213,7 @@
   &__titleBlock {
     align-items: center;
     justify-content: space-between;
-    margin-bottom: min(2.08vw, 40px);
+    margin-bottom: min(4.17vw, 80px);
 
     & hr {
       width: min(29.32vw, 563px);
@@ -232,6 +232,8 @@
   }
 
   &__more {
+    position: relative;
+    z-index: 1001;
     display: block;
     width: max-content;
     margin: 0 auto;
@@ -316,11 +318,13 @@
 
   &__list {
     flex-wrap: wrap;
+    min-height: min(18.23vw, 350px);
 
     gap: min(.52vw, 10px);
 
     & > li {
       width: max-content;
+      height: max-content;
       padding: min(.78vw, 15px) min(1.56vw, 30px);
       border-radius: min(1.56vw, 30px);
       font-size: min(1.04vw, 20px);
@@ -592,52 +596,46 @@
   }
 }
 
-//
- .example-desc {
-        margin:3px 0;
-        padding:5px;
-      }
+#carousel {
+  position: relative;
+  display: flex;
 
-      #carousel {
-        display: flex;
-        justify-content: center;
-        width:100%;
-        text-align: center;
-        margin: 0 auto;
-        border:1px solid #222;
-        height:600px;
-        position:relative;
-        clear:both;
-        overflow:hidden;
-        background:#FFF;
-      }
-      #carousel img {
-        visibility:hidden; /* hide images until carousel can handle them */
-        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
-        width: 500px;
-        height: 400px;
-        object-fit: cover;
-      }
+// overflow: hidden;
+  justify-content: center;
+  width: 100%;
+  height: min(28.80vw, 553px);
+  margin: 0 auto;
+  margin-bottom: min(3.13vw, 60px);
+  text-align: center;
+}
 
-      .split-left {
-        width:450px;
-        float:left;
-      }
-      .split-right {
-        width:400px;
-        float:left;
-        margin-left:10px;
-      }
-      #callback-output {
-        height:250px;
-        overflow:scroll;
-      }
-      textarea#newoptions {
-        width:430px;
-      }
-      .nav {
-        width: 80px; margin: 20px auto
-      }
+#carousel img {
+  position: absolute;
+  visibility: hidden; /* hide images until carousel can handle them */
+  width: min(44.43vw, 853px);
+  height: 100%;
+  border-radius: min(2.60vw, 50px);
+  box-shadow: 0 0 min(5.52vw, 106px) 0 black;
+  cursor: pointer; /* otherwise it's not as obvious items can be clicked */
+
+  object-fit: cover;
+}
+
+.nav {
+  position: absolute;
+  z-index: 1000;
+  top: 110.5%;
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+
+  & button {
+    & svg {
+      width: min(2.08vw, 40px);
+      height: min(2.08vw, 40px);
+    }
+  }
+}
 
 // hover
 .nomin__button:hover {
@@ -648,7 +646,7 @@
 .org__lastLink:hover,
 .quest__descrBlock > a:hover,
 .moment__more:hover,
-.hero__mainTxt>a:hover {
+.hero__mainTxt > a:hover {
   color: #e5f2ff;
   background: #071433;
 }
